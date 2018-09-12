@@ -273,6 +273,11 @@ public class MyDate {
 		}
 	}
 	
+	public void lama() {
+		if(year == 1999) {
+			System.out.println("It's lama year!!!");
+		}
+	}
 	public void nextDay() {	
 		day++;
 		
