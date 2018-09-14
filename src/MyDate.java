@@ -1,4 +1,4 @@
-import java.sql.Date;
+import java.util.*;
 import java.util.GregorianCalendar;
 
 public class MyDate {
@@ -10,6 +10,11 @@ public class MyDate {
 		this.day = d;
 		this.month = m;
 		this.year = y;
+	}
+	public MyDate() {
+		day = 1;
+		month = 1;
+		year = 1000;
 	}
 
 	public void setDay(int d) {
@@ -273,7 +278,7 @@ public class MyDate {
 		}
 	}
 	
-	public void nextDay() {	
+	public int nextDay() {	
 		day++;
 		
 		if(day>daysInMonth())
@@ -285,7 +290,7 @@ public class MyDate {
 				year++;
 			}
 		}
-		
+		return day;
 	}
 	
 	public String toString() {
